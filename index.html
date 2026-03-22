@@ -6,33 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lernzettel – Chemie SA2</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
-
-:root {
-–bg: #f4f5f7;
-–card: #ffffff;
-–border: #dde1e8;
-–text: #1a1c20;
-–muted: #6b7280;
-–code-bg: #1e2028;
-–a1: #1d6f42;
-–a2: #0969da;
-–a3: #cf222e;
-–a4: #7c3aed;
-–a5: #0f766e;
-–a1-bg: #e6f4ec;
-–a2-bg: #dbeafe;
-–a3-bg: #fde8e8;
-–a4-bg: #ede9fe;
-–a5-bg: #ccfbf1;
-}
-
-- { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-background: var(–bg);
-color: var(–text);
-font-family: ‘Syne’, Arial, sans-serif;
+background-color: #111318;
+color: #e2e4e9;
+font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Helvetica, Arial, sans-serif;
 font-size: 15px;
 line-height: 1.65;
 padding: 24px 16px 60px;
@@ -41,33 +20,35 @@ margin: 0 auto;
 }
 
 header {
-background: var(–card);
-border: 1px solid var(–border);
+background-color: #1a1d23;
+border: 1px solid #2e3138;
 border-radius: 10px;
 padding: 20px 24px;
 margin-bottom: 20px;
+border-left: 4px solid #e8ff47;
 }
 
-header h1 { font-size: 26px; font-weight: 800; color: var(–text); }
-header p { color: var(–muted); font-size: 12px; margin-top: 4px; font-family: monospace; }
+header h1 { font-size: 24px; font-weight: 800; color: #e8ff47; }
+header p  { color: #7a7d85; font-size: 12px; margin-top: 4px; font-family: monospace; }
 
 .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .toc a {
-background: var(–card);
-border: 1px solid var(–border);
-color: var(–a2);
+background-color: #1a1d23;
+border: 1px solid #2e3138;
+color: #47d4ff;
 text-decoration: none;
 padding: 5px 12px;
 border-radius: 6px;
-font-size: 13px;
+font-size: 12px;
 font-weight: 600;
 }
+.toc a:hover { border-color: #47d4ff; background-color: #1e2a30; }
 
 section {
-background: var(–card);
-border: 1px solid var(–border);
+background-color: #1a1d23;
+border: 1px solid #2e3138;
 border-radius: 10px;
-margin-bottom: 16px;
+margin-bottom: 14px;
 overflow: hidden;
 }
 
@@ -75,17 +56,15 @@ overflow: hidden;
 display: flex;
 align-items: center;
 gap: 12px;
-padding: 14px 20px;
-border-bottom: 1px solid var(–border);
+padding: 13px 18px;
+border-bottom: 1px solid #2e3138;
 cursor: pointer;
 user-select: none;
-background: #fff;
 }
+.section-header:hover { background-color: #20232a; }
 
-.section-header:hover { background: #f8f9fb; }
-
-.num { font-family: monospace; font-size: 11px; color: var(–muted); min-width: 28px; }
-.section-header h2 { font-size: 15px; font-weight: 700; flex: 1; color: var(–text); }
+.num { font-family: monospace; font-size: 11px; color: #7a7d85; min-width: 28px; }
+.section-header h2 { font-size: 15px; font-weight: 700; flex: 1; color: #e2e4e9; }
 
 .tag {
 font-family: monospace;
@@ -93,20 +72,25 @@ font-size: 10px;
 padding: 3px 9px;
 border-radius: 4px;
 font-weight: 700;
+letter-spacing: 0.3px;
 }
 
-.c1 .section-header { border-left: 4px solid var(–a1); }
-.c1 .tag { background: var(–a1-bg); color: var(–a1); }
-.c2 .section-header { border-left: 4px solid var(–a2); }
-.c2 .tag { background: var(–a2-bg); color: var(–a2); }
-.c3 .section-header { border-left: 4px solid var(–a3); }
-.c3 .tag { background: var(–a3-bg); color: var(–a3); }
-.c4 .section-header { border-left: 4px solid var(–a4); }
-.c4 .tag { background: var(–a4-bg); color: var(–a4); }
-.c5 .section-header { border-left: 4px solid var(–a5); }
-.c5 .tag { background: var(–a5-bg); color: var(–a5); }
+.c1 .section-header { border-left: 4px solid #e8ff47; }
+.c1 .tag { background-color: #2a2e00; color: #e8ff47; }
 
-.section-body { padding: 18px 22px 22px; }
+.c2 .section-header { border-left: 4px solid #47d4ff; }
+.c2 .tag { background-color: #001e2a; color: #47d4ff; }
+
+.c3 .section-header { border-left: 4px solid #ff6b47; }
+.c3 .tag { background-color: #2a1100; color: #ff8c6b; }
+
+.c4 .section-header { border-left: 4px solid #b47fff; }
+.c4 .tag { background-color: #1e1030; color: #c99fff; }
+
+.c5 .section-header { border-left: 4px solid #47ffb4; }
+.c5 .tag { background-color: #002a1a; color: #47ffb4; }
+
+.section-body { padding: 16px 20px 20px; }
 
 .block { margin-bottom: 16px; }
 .block:last-child { margin-bottom: 0; }
@@ -114,68 +98,71 @@ font-weight: 700;
 .block-title {
 font-size: 10px;
 font-family: monospace;
-color: var(–muted);
+color: #7a7d85;
 text-transform: uppercase;
 letter-spacing: 0.8px;
-margin-bottom: 7px;
+margin-bottom: 8px;
 font-weight: 700;
 }
 
 ul { padding-left: 20px; }
-li { margin-bottom: 5px; color: var(–text); }
+li { margin-bottom: 5px; color: #c8cad0; }
+li strong { color: #e2e4e9; }
 
-.hl  { color: var(–a1); font-weight: 700; }
-.hl2 { color: var(–a2); font-weight: 700; }
-.hl3 { color: var(–a3); font-weight: 700; }
-.hl4 { color: var(–a4); font-weight: 700; }
-.hl5 { color: var(–a5); font-weight: 700; }
+p, .section-body > div { color: #c8cad0; }
+
+.hl  { color: #e8ff47; font-weight: 700; }
+.hl2 { color: #47d4ff; font-weight: 700; }
+.hl3 { color: #ff8c6b; font-weight: 700; }
+.hl4 { color: #c99fff; font-weight: 700; }
+.hl5 { color: #47ffb4; font-weight: 700; }
 
 .formula-box {
-background: var(–code-bg);
+background-color: #0d0f12;
+border: 1px solid #2e3138;
 border-radius: 8px;
 padding: 12px 16px;
 font-family: monospace;
 font-size: 13px;
 line-height: 1.9;
 color: #cdd6f4;
-margin-top: 7px;
+margin-top: 8px;
 }
-
-.formula-box .arrow { color: #f9e2af; }
-.formula-box .mol   { color: #89dceb; }
-.formula-box .cm    { color: #6c7086; font-style: italic; }
+.formula-box .arrow   { color: #f9e2af; }
+.formula-box .mol     { color: #89dceb; }
+.formula-box .cm      { color: #585b6e; font-style: italic; }
 
 .merke {
-background: #fffbeb;
-border: 1px solid #fcd34d;
-border-left: 4px solid #f59e0b;
+background-color: #1e1a00;
+border: 1px solid #4a3f00;
+border-left: 4px solid #e8ff47;
 border-radius: 6px;
 padding: 10px 14px;
 margin-top: 8px;
 font-size: 13.5px;
-color: #78350f;
+color: #d4cc80;
 }
-
-.merke strong { color: #92400e; }
+.merke strong { color: #e8ff47; }
 
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
 
 .mini-card {
-background: #f8f9fb;
-border: 1px solid var(–border);
+background-color: #13151a;
+border: 1px solid #2e3138;
 border-radius: 8px;
 padding: 12px 14px;
 }
-
 .mini-card .label {
-font-size: 11px;
-color: var(–muted);
+font-size: 10px;
+color: #7a7d85;
 font-family: monospace;
 text-transform: uppercase;
-margin-bottom: 6px;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
 font-weight: 700;
 }
+.mini-card li { color: #c8cad0; }
 
 .steps { counter-reset: step; list-style: none; padding: 0; }
 .steps li {
@@ -184,39 +171,41 @@ display: flex;
 gap: 12px;
 align-items: flex-start;
 margin-bottom: 10px;
+color: #c8cad0;
 }
 .steps li::before {
 content: counter(step);
 min-width: 24px; height: 24px;
 border-radius: 50%;
-background: var(–a1);
-color: #fff;
+background-color: #e8ff47;
+color: #111318;
 font-size: 11px; font-weight: 700;
 font-family: monospace;
 display: flex; align-items: center; justify-content: center;
 flex-shrink: 0; margin-top: 2px;
 }
-.steps.blue   li::before { background: var(–a2); }
-.steps.red    li::before { background: var(–a3); }
-.steps.purple li::before { background: var(–a4); }
-.steps.teal   li::before { background: var(–a5); }
+.steps.blue   li::before { background-color: #47d4ff; color: #111318; }
+.steps.red    li::before { background-color: #ff8c6b; color: #111318; }
+.steps.purple li::before { background-color: #c99fff; color: #111318; }
+.steps.teal   li::before { background-color: #47ffb4; color: #111318; }
 
 table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
 th {
-background: #f1f3f6;
+background-color: #13151a;
 padding: 8px 12px;
 text-align: left;
 font-family: monospace;
 font-size: 10px;
-color: var(–muted);
+color: #7a7d85;
 text-transform: uppercase;
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid #2e3138;
 font-weight: 700;
 }
-td { padding: 8px 12px; border-bottom: 1px solid #f0f1f3; vertical-align: top; color: var(–text); }
+td { padding: 8px 12px; border-bottom: 1px solid #20232a; vertical-align: top; color: #c8cad0; }
 tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: #1e2128; }
 
-.chevron { font-size: 13px; color: var(–muted); transition: transform 0.2s; }
+.chevron { font-size: 13px; color: #7a7d85; transition: transform 0.2s; }
 .collapsed .chevron { transform: rotate(-90deg); }
 .collapsed .section-body { display: none; }
 .collapsed .section-header { border-bottom: none; }
@@ -251,7 +240,7 @@ tr:last-child td { border-bottom: none; }
   <div class="section-body">
     <div class="block">
       <div class="block-title">Definition</div>
-      Mehrfachbindungen (C=C oder C≡C) werden <span class="hl">aufgespalten</span>, um Atome/Atomgruppen anzulagern. Aus zwei Molekülen entsteht <span class="hl">ein neues</span> — nichts wird abgespalten.
+      <p>Mehrfachbindungen (C=C oder C≡C) werden <span class="hl">aufgespalten</span>, um Atome/Atomgruppen anzulagern. Aus zwei Molekülen entsteht <span class="hl">ein neues</span> — nichts wird abgespalten.</p>
       <div class="merke"><strong>Merksatz:</strong> Aus zwei wird eins – nichts geht verloren.</div>
     </div>
     <div class="block">
@@ -259,16 +248,16 @@ tr:last-child td { border-bottom: none; }
       <ul>
         <li>Bromwasser ist <strong>rotbraun</strong></li>
         <li>Positive Probe → Entfärbung (<strong>farblos</strong>)</li>
-        <li>Weist <span class="hl">Alkene &amp; Alkine</span> nach</li>
+        <li>Weist <span class="hl">Alkene &amp; Alkine</span> nach (Mehrfachbindungen)</li>
         <li>Schütteln nötig → vergrößert Kontaktfläche zwischen den Phasen</li>
       </ul>
     </div>
     <div class="block">
       <div class="block-title">Reaktionsmechanismus — Brom an Ethen (3 Schritte)</div>
       <ol class="steps">
-        <li><strong>Polarisierung des Brommoleküls</strong> — π-Elektronen stoßen das nähere Br ab → δ⁺/δ⁻ entstehen</li>
-        <li><strong>Cyclischer Übergangszustand</strong> — Br⁺ lagert sich an beide C-Atome an → Bromonium-Ion + Br⁻</li>
-        <li><strong>Addition des Bromid-Ions</strong> — Br⁻ greift von der gegenüberliegenden Seite an</li>
+        <li><strong style="color:#e2e4e9">Polarisierung des Brommoleküls</strong> — π-Elektronen stoßen das nähere Br ab → δ⁺/δ⁻ entstehen</li>
+        <li><strong style="color:#e2e4e9">Cyclischer Übergangszustand</strong> — Br⁺ lagert sich an beide C-Atome an → Bromonium-Ion + Br⁻</li>
+        <li><strong style="color:#e2e4e9">Addition des Bromid-Ions</strong> — Br⁻ greift von der gegenüberliegenden Seite an</li>
       </ol>
       <div class="formula-box">
         <span class="mol">CH₂=CH₂</span> + <span class="mol">Br₂</span> <span class="arrow">→</span> <span class="mol">CH₂Br–CH₂Br</span> <span class="cm">// 1,2-Dibromethan (farblos)</span>
@@ -293,24 +282,24 @@ tr:last-child td { border-bottom: none; }
   <div class="section-body">
     <div class="block">
       <div class="block-title">Definition</div>
-      Atome/Atomgruppen werden durch andere <span class="hl2">ersetzt</span>. Z. B. H-Atom durch Br-Atom. Mechanismus = <span class="hl2">Radikalkettenreaktion</span>.
+      <p>Atome/Atomgruppen werden durch andere <span class="hl2">ersetzt</span>. Z. B. H-Atom durch Br-Atom. Mechanismus = <span class="hl2">Radikalkettenreaktion</span>.</p>
     </div>
     <div class="block">
       <div class="block-title">3 Phasen</div>
       <ol class="steps blue">
         <li>
-          <div><strong>Startreaktion</strong> — durch Licht/Wärme
-          <div class="formula-box" style="margin-top:6px">Br–Br <span class="arrow">→ (hν)</span> 2 Br• <span class="cm">// homolytische Spaltung → 2 Radikale</span></div></div>
+          <div><strong style="color:#e2e4e9">Startreaktion</strong> — durch Licht/Wärme (homolytische Spaltung)
+          <div class="formula-box" style="margin-top:6px">Br–Br <span class="arrow">→ (hν)</span> 2 Br• <span class="cm">// 2 Brom-Radikale entstehen</span></div></div>
         </li>
         <li>
-          <div><strong>Kettenreaktion</strong> — läuft selbstständig weiter
+          <div><strong style="color:#e2e4e9">Kettenreaktion</strong> — läuft selbstständig weiter (Schleife!)
           <div class="formula-box" style="margin-top:6px">
-            R–CH₃ + Br• <span class="arrow">→</span> R–CH₂• + H–Br <span class="cm">// Heptyl-Radikal entsteht</span><br>
-            R–CH₂• + Br₂ <span class="arrow">→</span> R–CH₂–Br + Br• <span class="cm">// 1-Bromheptan + neues Radikal → geht von vorne los</span>
+            R–CH₃ + Br• <span class="arrow">→</span> R–CH₂• + H–Br <span class="cm">// Heptyl-Radikal</span><br>
+            R–CH₂• + Br₂ <span class="arrow">→</span> R–CH₂–Br + Br• <span class="cm">// 1-Bromheptan + neues Radikal → von vorne</span>
           </div></div>
         </li>
         <li>
-          <div><strong>Abbruchreaktion</strong> — wenn zwei Radikale zusammentreffen
+          <div><strong style="color:#e2e4e9">Abbruchreaktion</strong> — wenn zwei Radikale zusammentreffen
           <div class="formula-box" style="margin-top:6px">
             R• + R• <span class="arrow">→</span> R–R &nbsp;|&nbsp; R• + Br• <span class="arrow">→</span> R–Br &nbsp;|&nbsp; Br• + Br• <span class="arrow">→</span> Br₂
           </div></div>
@@ -356,7 +345,7 @@ tr:last-child td { border-bottom: none; }
       <div class="block-title">Was passiert? (Reagenz: CuO)</div>
       <ul>
         <li><span class="hl3">Oxidation:</span> Ethanol → Ethanal (OZ am C steigt)</li>
-        <li><span class="hl3">Reduktion:</span> Cu²⁺ → Cu⁰ (OZ sinkt, nimmt 2 Elektronen auf)</li>
+        <li><span class="hl3">Reduktion:</span> Cu²⁺ → Cu⁰ (nimmt 2 Elektronen auf)</li>
       </ul>
     </div>
     <div class="block">
@@ -429,7 +418,7 @@ tr:last-child td { border-bottom: none; }
   <div class="section-body">
     <div class="block">
       <div class="block-title">Definition</div>
-      Zwei Moleküle verbinden sich unter <span class="hl">Abspaltung von H₂O</span>. Die Veresterung ist eine Kondensationsreaktion.
+      <p>Zwei Moleküle verbinden sich unter <span class="hl">Abspaltung von H₂O</span>. Die Veresterung ist eine Kondensationsreaktion.</p>
     </div>
     <div class="block">
       <div class="block-title">Veresterung</div>
@@ -441,7 +430,7 @@ tr:last-child td { border-bottom: none; }
     <div class="block">
       <div class="block-title">Benennung</div>
       <div class="merke">
-        <strong>[Säurename] + "-" + [Alkylrest des Alkohols] + "-ester"</strong><br><br>
+        <strong>[Säurename] + "-" + [Alkylrest] + "-ester"</strong><br><br>
         Essigsäure + Ethanol → <strong>Essigsäure-ethyl-ester</strong><br>
         Propansäure + Butanol → <strong>Propansäure-butyl-ester</strong><br>
         Methansäure + Ethanol → <strong>Methansäure-ethyl-ester</strong>
@@ -471,7 +460,7 @@ tr:last-child td { border-bottom: none; }
   <div class="section-body">
     <div class="block">
       <div class="block-title">Funktionelle Gruppe</div>
-      Ester-Gruppe: <span class="hl2">–COO–</span> (polar, aber mit unpolaren Alkyl-Resten an beiden Seiten)
+      <p>Ester-Gruppe: <span class="hl2">–COO–</span> (polare Gruppe, aber mit unpolaren Alkyl-Resten an beiden Seiten)</p>
     </div>
     <div class="block">
       <div class="block-title">Wechselwirkungen</div>
@@ -538,12 +527,12 @@ tr:last-child td { border-bottom: none; }
         <li>Bildet <span class="hl5">Wasserstoffbrücken</span> zu H₂O-Molekülen</li>
         <li>Dickflüssig (viskos), hygroskopisch (wasseranziehend)</li>
         <li>Sehr gut wasserlöslich</li>
-        <li>Hohe Siedetemperatur: <strong>290 °C</strong> (Propanol nur 97 °C)</li>
+        <li>Hohe Siedetemperatur: <strong style="color:#e2e4e9">290 °C</strong> (Propanol nur 97 °C)</li>
       </ul>
     </div>
     <div class="block">
       <div class="block-title">Verwendung</div>
-      Feuchthaltemittel (Tabak, Cremes, Salben), Seifenblasen, Süßungsmittel, Nitroglycerin (Sprengstoff + Herzmedikament in kleiner Dosis)
+      <p>Feuchthaltemittel (Tabak, Cremes, Salben), Seifenblasen, Süßungsmittel, Nitroglycerin (Sprengstoff + Herzmedikament in kleiner Dosis)</p>
     </div>
   </div>
 </section>
@@ -558,7 +547,7 @@ tr:last-child td { border-bottom: none; }
   <div class="section-body">
     <div class="block">
       <div class="block-title">Aufbau</div>
-      Fette = <span class="hl3">Triester</span> aus <span class="hl3">Glycerin</span> + <span class="hl3">3 Fettsäuren</span> → Dreifachveresterung (3× Kondensationsreaktion)
+      <p>Fette = <span class="hl3">Triester</span> aus <span class="hl3">Glycerin</span> + <span class="hl3">3 Fettsäuren</span> → Dreifachveresterung (3× Kondensationsreaktion)</p>
       <div class="formula-box">
         Glycerin (3× OH) + 3× Fettsäure (–COOH) <span class="arrow">→</span> Tri-Fettsäure-Glycerin-Ester + 3 H₂O
       </div>
@@ -569,7 +558,7 @@ tr:last-child td { border-bottom: none; }
         <div class="mini-card">
           <div class="label">Feste Fette (z.B. Butter, 28–35°C)</div>
           <ul>
-            <li><strong>Gesättigte</strong> Fettsäurereste</li>
+            <li><strong style="color:#e2e4e9">Gesättigte</strong> Fettsäurereste</li>
             <li>Nur C–C-Einfachbindungen</li>
             <li>Gerade Ketten → lagern sich gut an</li>
             <li>Starke London-Kräfte</li>
@@ -578,7 +567,7 @@ tr:last-child td { border-bottom: none; }
         <div class="mini-card">
           <div class="label">Flüssige Fette / Öle</div>
           <ul>
-            <li><strong>Ungesättigte</strong> Fettsäurereste (C=C)</li>
+            <li><strong style="color:#e2e4e9">Ungesättigte</strong> Fettsäurereste (C=C)</li>
             <li>Knicke in den Ketten</li>
             <li>Schlechtere Anlagerung</li>
             <li>Schwächere London-Kräfte → niedrigerer Schmelzpunkt</li>
@@ -592,7 +581,7 @@ tr:last-child td { border-bottom: none; }
         <li><span class="hl3">Lipophil + hydrophob</span> (lange unpolare Fettsäurereste)</li>
         <li>Kein fester Schmelzpunkt (Gemisch verschiedener Triester)</li>
         <li>Fette Öle zersetzen sich beim Erhitzen → bilden <span class="hl3">Propenal</span></li>
-        <li>Fettbrand NICHT mit Wasser löschen → Stichflamme!</li>
+        <li>Fettbrand <strong style="color:#ff8c6b">NICHT</strong> mit Wasser löschen → Stichflamme!</li>
       </ul>
     </div>
     <div class="block">
